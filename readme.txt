@@ -27,9 +27,9 @@ No changes in base url
 API
 ----
 
-	http://localhost:8081/weather?location=desmoines
+	http://localhost:8081/weather?location=Des Moines
 
-	http://localhost:8081/forecast?location=desmoines
+	http://localhost:8081/forecast?location=Des Moines
 
 ---------------------------------------------------------------------------------------
 
