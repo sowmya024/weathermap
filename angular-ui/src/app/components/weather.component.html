@@ -1,0 +1,77 @@
+<input type="text" [(ngModel)]='city' placeholder="Enter city / state" />
+&nbsp;&nbsp;
+<button (click)="loadData();">Load Data</button>
+<br /><br />
+
+<table class="wtable">
+    <tr class="wtitle">
+        <td colspan="2">Weather Data</td>
+    </tr>
+    <tr>
+        <td width="200">Date</td>
+        <td>{{this.data.dt * 1000 | date: 'medium' }}</td>
+    </tr>
+
+    <tr>
+        <td width="200">Location</td>
+        <td>{{this.data.name}}</td>
+    </tr>
+
+    <tr class="wtitle">
+        <td colspan="2">Temprature</td>
+    </tr>
+    <tr>
+        <td>Temp</td>
+        <td>{{this.data.main.temp}}</td>
+    </tr>
+    <tr>
+        <td>Temp Min</td>
+        <td>{{this.data.main.temp_min}}</td>
+    </tr>
+    <tr>
+        <td>Temp Max</td>
+        <td>{{this.data.main.temp_max}}</td>
+    </tr>
+    <tr>
+        <td>Feels Like</td>
+        <td>{{this.data.main.feels_like}}</td>
+    </tr>
+    <tr>
+        <td>Pressure</td>
+        <td>{{this.data.main.pressure}}</td>
+    </tr>
+    <tr>
+        <td>humidity</td>
+        <td>{{this.data.main.humidity}}</td>
+    </tr>
+
+
+    <tr class="wtitle">
+        <td colspan="2">Wind</td>
+    </tr>
+    <tr>
+        <td>speed</td>
+        <td>{{this.data.wind.speed}}</td>
+    </tr>
+    <tr>
+        <td>Degree</td>
+        <td>{{this.data.wind.deg}}</td>
+    </tr>
+
+    <tr class="wtitle">
+        <td colspan="2">Cordinates</td>
+    </tr>
+    <tr>
+        <td>Latitude</td>
+        <td>{{this.data.coord.lon}}</td>
+    </tr>
+    <tr>
+        <td>Longitude</td>
+        <td>{{this.data.coord.lat}}</td>
+    </tr>
+
+    <tr>
+        <td>Visibility</td>
+        <td>{{this.data.visibility}}</td>
+    </tr>
+</table>

@@ -1,0 +1,48 @@
+<input type="text" [(ngModel)]='city' placeholder="Enter city / state" />
+&nbsp;&nbsp;
+<button (click)="loadData();">Load Data</button>
+<br /><br />
+
+<table class="wtable" style="width:90%">
+    <thead>
+        <tr>
+            <th rowspan="2">Time</th>
+            <th colspan="8">Temprature</th>
+            <th colspan="3">Wind</th>
+            <th rowspan="2">Visibility</th>
+        </tr>
+        <tr>
+            <th>Temp</th>
+            <th>Temp Min</th>
+            <th>Temp Max</th>
+            <th>Pressure</th>
+            <th>feels_like</th>
+            <th>Sea Level</th>
+            <th>Grnd Level</th>
+            <th>Humidity</th>
+            <th>Speed</th>
+            <th>Deg</th>
+            <th>Gust</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of data">
+
+            <td>{{d.dt_txt}}</td>
+            <td>{{d.main.temp}}</td>
+            <td>{{d.main.temp_min}}</td>
+            <td>{{d.main.temp_max}}</td>
+            <td>{{d.main.pressure}}</td>
+            <td>{{d.main.feels_like}}</td>
+            <td>{{d.main.sea_level}}</td>
+            <td>{{d.main.grnd_level}}</td>
+            <td>{{d.main.humidity}}</td>
+
+            <td>{{d.wind.speed}}</td>
+            <td>{{d.wind.deg}}</td>
+            <td>{{d.wind.gust}}</td>
+
+            <td>{{d.visibility}}</td>
+        </tr>
+    </tbody>
+</table>
